@@ -7,8 +7,10 @@ using System;
 
 public class UnitCreater_Lin : MonoBehaviour
 {
+    [SerializeField] bool isPlayer;
+
     [Header("All units that can be created")]//모든 유닛 리스트
-    [SerializeField] List<UnitInfo> allUnitList;
+    [SerializeField] protected List<UnitInfo> allUnitList;
 
     [SerializeField] float curGold;
     [SerializeField] int maxGold;
@@ -22,13 +24,13 @@ public class UnitCreater_Lin : MonoBehaviour
     public static event Action<float, int> OnGoldChanged;
     public static event Action<UnitInfo, int> UpdateUnitImg;
 
-    private void Start()
+    public virtual void Start()
     {
         GetNextUnit();
         GetCurUnit();
     }
 
-    private void Update()
+    public virtual void Update()
     {
         goldAcquisition();
     }
@@ -43,10 +45,12 @@ public class UnitCreater_Lin : MonoBehaviour
         if (curGold >= curUnit[curUnitNumber].price)
         {
             curGold -= curUnit[curUnitNumber].price;
-            OnGoldChanged?.Invoke(curGold, maxGold);
             Instantiate(curUnit[curUnitNumber].gameObject, unitSpawnLocation.position, Quaternion.identity);
             curUnit[curUnitNumber] = null;
             GetCurUnit();
+           
+            if(isPlayer)
+                OnGoldChanged?.Invoke(curGold, maxGold);
         }
 
 
@@ -54,15 +58,17 @@ public class UnitCreater_Lin : MonoBehaviour
 
     // nextUnit에 랜덤 유닛 넣어주기
     // Assign a random unit to nextUnit
-    void GetCurUnit()
+    protected void GetCurUnit()
     {
         for (int i = 0; i < curUnit.Count; i++)
         {
             if (curUnit[i] == null)
             {
                 curUnit[i] = nextUnit;
-                UpdateUnitImg?.Invoke(curUnit[i], i);
                 GetNextUnit();
+
+                if(isPlayer)
+                    UpdateUnitImg?.Invoke(curUnit[i], i);
             }
         }
     }
@@ -70,24 +76,26 @@ public class UnitCreater_Lin : MonoBehaviour
 
     // 유닛 사용 시 유닛 리스트에 nextUnit 넣어주기
     // When using a unit, add nextUnit to the unit list
-    void GetNextUnit()
+    protected void GetNextUnit()
     {
         //allUnitList 랜덤하게 뽑아서
         int randomNum = UnityEngine.Random.Range(0, allUnitList.Count);
         nextUnit = allUnitList[randomNum];
-        UpdateUnitImg?.Invoke(nextUnit, curUnit.Count);
+        if(isPlayer)
+            UpdateUnitImg?.Invoke(nextUnit, curUnit.Count);
     }
 
 
     // 골드 수급
     // Gold acquisition
-    void goldAcquisition()
+    protected void goldAcquisition()
     {
         if (curGold >= maxGold)
             return;
 
         curGold += Time.deltaTime * goldGenerationRate;
-        OnGoldChanged?.Invoke(curGold, maxGold);
+        if(isPlayer)
+            OnGoldChanged?.Invoke(curGold, maxGold);
     }
 
 }
