@@ -13,11 +13,15 @@ public class UnitCreation_Img
 
 public class UIManager_Lin : MonoBehaviour
 {
-
+    [Header("gold")]
     [SerializeField] Slider goldSlider;
     [SerializeField] TextMeshProUGUI GoldText;
 
     [SerializeField] List<UnitCreation_Img> unitCreation_Image;
+
+    [Header("Upgrade")]
+    [SerializeField] Animator upgradeAni;
+    [SerializeField] TextMeshProUGUI [] UpgradeCost;
     private void OnEnable()
     {
         UnitCreater_Lin.OnGoldChanged += UpdateGoldSlider;
@@ -56,6 +60,7 @@ public class UIManager_Lin : MonoBehaviour
         }
     }
 
+
     //사용가능한 유닛의 이미지 업데이트
     //Update images of available units
     public void UpdateUnitImg(UnitInfo unit, int num)
@@ -64,4 +69,27 @@ public class UIManager_Lin : MonoBehaviour
         unitCreation_Image[num].unitPrice.text = unit.price.ToString();
     }
         
+    public void OpenClose_Upgrade_BtnEvent()
+    {
+        if (upgradeAni.GetCurrentAnimatorStateInfo(0).IsName("CloseUpgrade") || upgradeAni.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            upgradeAni.Play("OpenUpgrade");
+        }
+        else
+        {
+            upgradeAni.Play("CloseUpgrade");
+        }
+    }
+
+
+    public void UpgradeUnit(string unitName)
+    {
+        int [] num= UnitUpgradeManager.instance.UpgradeUnit(unitName);
+        if(num[0] != -1)
+        {
+            //UnitUpgradeManager의 배열값으로 0 <- 텍스트[순서] , 1 <- 다음 코스트 
+            UpgradeCost[num[0]].text = num[1].ToString();
+        }
+    }
+   
 }

@@ -7,6 +7,7 @@ using System;
 
 public class UnitCreater_Lin : MonoBehaviour
 {
+
     [SerializeField] bool isPlayer;
 
     [Header("All units that can be created")]//모든 유닛 리스트
@@ -34,6 +35,23 @@ public class UnitCreater_Lin : MonoBehaviour
     {
         goldAcquisition();
     }
+
+    public bool GoldCheck(int cost)
+    {
+        if (cost <= curGold)
+        {
+            curGold -= cost;
+            if (isPlayer)
+                OnGoldChanged?.Invoke(curGold, maxGold);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
 
     // 유닛 이미지 선택으로 유닛 소환하는 것
     // Summon unit by selecting its image
