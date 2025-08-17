@@ -528,7 +528,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1369936304}
-  - {fileID: 386629196}
   - {fileID: 1140868947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -557,12 +556,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386629195}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.545519, y: -80.61109, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 292095441}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &386629197
 MonoBehaviour:
@@ -600,9 +599,9 @@ MonoBehaviour:
   upgradeCost: 00000000040000000600000008000000
   curFlowerLV: 1
   Flower:
-  - {fileID: 1372141416}
-  - {fileID: 1372141415}
-  - {fileID: 1372141414}
+  - {fileID: 642185567}
+  - {fileID: 1257081699}
+  - {fileID: 1467185107}
 --- !u!1 &585897509
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +777,11 @@ MonoBehaviour:
   unitDescription: Flower (Your Base)\n A crucial support unit that heals nearby
     allies. Position it carefully to keep your frontline tanks and damage dealers
     in the fight.
+--- !u!1 &642185567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5501349290023855760, guid: d9807dfebbe5368439e6b0466b3e327c, type: 3}
+  m_PrefabInstance: {fileID: 1372141409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &745095908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1560,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245481697}
   m_CullTransparentMesh: 1
+--- !u!1 &1257081699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5092558042584136571, guid: d9807dfebbe5368439e6b0466b3e327c, type: 3}
+  m_PrefabInstance: {fileID: 1372141409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1270509545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,19 +2101,9 @@ MonoBehaviour:
   healTimer: 0
   GameOver_panel: {fileID: 0}
   GameClear_panel: {fileID: 0}
---- !u!1 &1372141414 stripped
+--- !u!1 &1467185107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5278326715685643019, guid: d9807dfebbe5368439e6b0466b3e327c, type: 3}
-  m_PrefabInstance: {fileID: 1372141409}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1372141415 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5092558042584136571, guid: d9807dfebbe5368439e6b0466b3e327c, type: 3}
-  m_PrefabInstance: {fileID: 1372141409}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1372141416 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5501349290023855760, guid: d9807dfebbe5368439e6b0466b3e327c, type: 3}
   m_PrefabInstance: {fileID: 1372141409}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1502863574
@@ -4987,6 +4986,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1589424300}
+  - {fileID: 386629196}
   - {fileID: 292095441}
   - {fileID: 2141963963}
   - {fileID: 1372141409}

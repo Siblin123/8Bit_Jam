@@ -38,6 +38,7 @@ public class UnitUpgradeManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     public void UpgradeUnit(int unitNum)
