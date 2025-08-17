@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: ce21276d469a4674b819ad624092d35b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7727990514301516364
+    second: BG_Animation3_0
+  - first:
+      213: 3661602586728901865
+    second: BG_Animation3_1
+  - first:
+      213: -8951998439003295882
+    second: BG_Animation3_2
+  - first:
+      213: 2103425572941586529
+    second: BG_Animation3_3
+  - first:
+      213: 8177310072110439859
+    second: BG_Animation3_4
+  - first:
+      213: -6532260389876296685
+    second: BG_Animation3_5
+  - first:
+      213: -780586980485211892
+    second: BG_Animation3_6
+  - first:
+      213: -1789509198698362797
+    second: BG_Animation3_7
+  - first:
+      213: -6548031723939458055
+    second: BG_Animation3_8
+  - first:
+      213: -6023654839298391128
+    second: BG_Animation3_9
+  - first:
+      213: -4660385927753100561
+    second: BG_Animation3_10
+  - first:
+      213: 3556036990473023014
+    second: BG_Animation3_11
+  - first:
+      213: -927348131137375896
+    second: BG_Animation3_12
+  - first:
+      213: -5141893254243776394
+    second: BG_Animation3_13
+  - first:
+      213: 6484086172195628986
+    second: BG_Animation3_14
+  - first:
+      213: -8122339734259829369
+    second: BG_Animation3_15
+  - first:
+      213: -422088198692502329
+    second: BG_Animation3_16
+  - first:
+      213: -3624990209359078744
+    second: BG_Animation3_17
+  - first:
+      213: -7152490346243529725
+    second: BG_Animation3_18
+  - first:
+      213: -6118421600026301449
+    second: BG_Animation3_19
+  - first:
+      213: -1773417091135693978
+    second: BG_Animation3_20
+  - first:
+      213: 7392173908929056837
+    second: BG_Animation3_21
+  - first:
+      213: 6547548733714146137
+    second: BG_Animation3_22
+  - first:
+      213: -570062385749264300
+    second: BG_Animation3_23
+  - first:
+      213: 6031275400024655080
+    second: BG_Animation3_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BG_Animation3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 386
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b548776299a0c490800000000000000
+      internalID: -7727990514301516364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 701
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eca0a21720a0d230800000000000000
+      internalID: 3661602586728901865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_2
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 553
+        width: 506
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f6b5579dc14c380800000000000000
+      internalID: -8951998439003295882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_3
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 502
+        width: 161
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 160e7a60a6ed03d10800000000000000
+      internalID: 2103425572941586529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_4
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 535
+        width: 86
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bddd527f24ab7170800000000000000
+      internalID: 8177310072110439859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_5
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 493
+        width: 82
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3149119e8cfb855a0800000000000000
+      internalID: -6532260389876296685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 505
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0952e7e64cca25f0800000000000000
+      internalID: -780586980485211892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_7
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 504
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3584a417dd26a27e0800000000000000
+      internalID: -1789509198698362797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_8
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 515
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3999c07d7b025a0800000000000000
+      internalID: -6548031723939458055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_9
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 469
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a38e0e96dda76ca0800000000000000
+      internalID: -6023654839298391128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_10
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 486
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe21c04c0bbf25fb0800000000000000
+      internalID: -4660385927753100561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_11
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 439
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e2b495dc4995130800000000000000
+      internalID: 3556036990473023014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_12
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 181
+        width: 179
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8613f6cb9c56123f0800000000000000
+      internalID: -927348131137375896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_13
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 428
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67882d3045354a8b0800000000000000
+      internalID: -5141893254243776394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_14
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 258
+        width: 110
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab72ebaf40a1cf950800000000000000
+      internalID: 6484086172195628986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_15
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 362
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785f662bb07a74f80800000000000000
+      internalID: -8122339734259829369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_16
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 389
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c48c050501742af0800000000000000
+      internalID: -422088198692502329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 339
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa12e05c9271bdc0800000000000000
+      internalID: -3624990209359078744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_18
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 274
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3046eb4fcef3dbc90800000000000000
+      internalID: -7152490346243529725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_19
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 316
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbea58b8fff61ba0800000000000000
+      internalID: -6118421600026301449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_20
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 116
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b10443d8e8367e0800000000000000
+      internalID: -1773417091135693978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_21
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 23
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54090a73107469660800000000000000
+      internalID: 7392173908929056837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_22
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 23
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953279602e09dda50800000000000000
+      internalID: 6547548733714146137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_23
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 161
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4587a9dc74bb618f0800000000000000
+      internalID: -570062385749264300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Animation3_24
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 0
+        width: 282
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e48501750563b350800000000000000
+      internalID: 6031275400024655080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BG_Animation3_0: -7727990514301516364
+      BG_Animation3_1: 3661602586728901865
+      BG_Animation3_10: -4660385927753100561
+      BG_Animation3_11: 3556036990473023014
+      BG_Animation3_12: -927348131137375896
+      BG_Animation3_13: -5141893254243776394
+      BG_Animation3_14: 6484086172195628986
+      BG_Animation3_15: -8122339734259829369
+      BG_Animation3_16: -422088198692502329
+      BG_Animation3_17: -3624990209359078744
+      BG_Animation3_18: -7152490346243529725
+      BG_Animation3_19: -6118421600026301449
+      BG_Animation3_2: -8951998439003295882
+      BG_Animation3_20: -1773417091135693978
+      BG_Animation3_21: 7392173908929056837
+      BG_Animation3_22: 6547548733714146137
+      BG_Animation3_23: -570062385749264300
+      BG_Animation3_24: 6031275400024655080
+      BG_Animation3_3: 2103425572941586529
+      BG_Animation3_4: 8177310072110439859
+      BG_Animation3_5: -6532260389876296685
+      BG_Animation3_6: -780586980485211892
+      BG_Animation3_7: -1789509198698362797
+      BG_Animation3_8: -6548031723939458055
+      BG_Animation3_9: -6023654839298391128
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
