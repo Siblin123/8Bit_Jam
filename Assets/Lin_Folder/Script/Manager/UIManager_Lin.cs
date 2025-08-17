@@ -64,8 +64,8 @@ public class UIManager_Lin : MonoBehaviour
     //Update images of available units
     public void UpdateUnitImg(UnitInfo unit, int num)
     {
-        unitCreation_Image[num].unitImage.sprite = unit.unitImage;
-        unitCreation_Image[num].unitPrice.text = unit.price.ToString();
+       // unitCreation_Image[num].unitImage.sprite = unit.unitImage;
+       // unitCreation_Image[num].unitPrice.text = unit.price.ToString();
     }
         
     public void OpenClose_Upgrade_BtnEvent()

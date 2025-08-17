@@ -6,9 +6,19 @@ public class Tower : UnitInfo
 
     [SerializeField] GameObject GameOver_panel;
     [SerializeField] GameObject GameClear_panel;
+
+    [SerializeField] GameObject[] flower;
+
     void Start()
     {
-        
+        UnitUpgradeManager unitUpgradeManager = GameObject.Find("UnitUpgradeManager").GetComponent<UnitUpgradeManager>();
+
+        if(unitUpgradeManager.curFlowerLV>1 && flower[0] != null)
+        {
+            flower[unitUpgradeManager.curFlowerLV - 2].gameObject.SetActive(false);
+            flower[unitUpgradeManager.curFlowerLV - 1].gameObject.SetActive(true);
+        }
+      
     }
 
     // Update is called once per frame
