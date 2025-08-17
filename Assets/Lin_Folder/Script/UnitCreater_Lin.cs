@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Unity.Mathematics;
 [System.Serializable]
 
 
@@ -59,27 +60,37 @@ public class UnitCreater_Lin : MonoBehaviour
     {
         //curUnitNumber = 버튼의 순서 = curUnit의 순서
         //curUnitNumber = button order = curUnit order
-        bool isPlayer = true;
+
 
         //적군 유닛 소환
         if (curUnitNumber == -1)
         {
             curUnitNumber = 0;
             isPlayer = false;
+            if (curGold >= curUnit[curUnitNumber].price)
+            {
+                curGold -= curUnit[curUnitNumber].price;
+                GameObject unit = Instantiate(curUnit[curUnitNumber].gameObject, unitSpawnLocation.position, Quaternion.identity);
+                unit.GetComponent<UnitInfo>().isPlayer = isPlayer;
+                curUnit[curUnitNumber] = null;
+                GetCurUnit();
+
+                if (isPlayer)
+                    OnGoldChanged?.Invoke(curGold, maxGold);
+            }
+            return;
         }
 
-        if (curGold >= curUnit[curUnitNumber].price)
+        #region 카드 생성방식이 아닌 정해진 카드를 플레이하는 방식으로 수정
+        if (curGold >= allUnitList[curUnitNumber].price)
         {
-            curGold -= curUnit[curUnitNumber].price;
-            GameObject unit = Instantiate(curUnit[curUnitNumber].gameObject, unitSpawnLocation.position, Quaternion.identity);
+            bool isPlayer = true;
+            curGold -= allUnitList[curUnitNumber].price;
+            GameObject unit = Instantiate(allUnitList[curUnitNumber].gameObject, unitSpawnLocation.position, Quaternion.identity);
             unit.GetComponent<UnitInfo>().isPlayer = isPlayer;
-            curUnit[curUnitNumber] = null;
-            GetCurUnit();
-
-            if (isPlayer)
-                OnGoldChanged?.Invoke(curGold, maxGold);
+            if (isPlayer) OnGoldChanged?.Invoke(curGold, maxGold);
         }
-       
+        #endregion
 
     }
 
@@ -94,7 +105,7 @@ public class UnitCreater_Lin : MonoBehaviour
                 curUnit[i] = nextUnit;
                 GetNextUnit();
 
-                if(isPlayer)
+                if (isPlayer)
                     UpdateUnitImg?.Invoke(curUnit[i], i);
             }
         }
@@ -108,7 +119,7 @@ public class UnitCreater_Lin : MonoBehaviour
         //allUnitList 랜덤하게 뽑아서
         int randomNum = UnityEngine.Random.Range(0, allUnitList.Count);
         nextUnit = allUnitList[randomNum];
-        if(isPlayer)
+        if (isPlayer)
             UpdateUnitImg?.Invoke(nextUnit, curUnit.Count);
     }
 
@@ -121,7 +132,7 @@ public class UnitCreater_Lin : MonoBehaviour
             return;
 
         curGold += Time.deltaTime * goldGenerationRate;
-        if(isPlayer)
+        if (isPlayer)
             OnGoldChanged?.Invoke(curGold, maxGold);
     }
 

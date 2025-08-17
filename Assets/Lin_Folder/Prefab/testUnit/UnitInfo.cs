@@ -1,5 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class UnitInfo : MonoBehaviour
 {
     public string unitName;
@@ -18,6 +20,7 @@ public class UnitInfo : MonoBehaviour
     // 플레이어의 가능한 상태들을 열거형으로 정의합니다.
 
     [SerializeField] AudioSource AudioSource;
+    [SerializeField] Rigidbody2D rigidBody;
 
 
     public enum PlayerState
@@ -39,17 +42,20 @@ public class UnitInfo : MonoBehaviour
     [SerializeField] LayerMask playerLayer;
     [SerializeField] LayerMask EnemyLayer;
 
+    private bool bForceStop = false;
+
     private void Awake()
     {
         AudioSource = GetComponent<AudioSource>();
         ani = GetComponent<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
     }
     private void Start()
     {
         if (isPlayer)
         {
-            if(!GetComponent<Tower>())
-                transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
+            if (!GetComponent<Tower>())
+                transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
             gameObject.layer = LayerMask.NameToLayer("Player");
             targetLayer = EnemyLayer;
             if (Player_Unit != null && Enemy_Unit != null)
@@ -60,23 +66,23 @@ public class UnitInfo : MonoBehaviour
         }
         else
         {
-            if(Player_Unit!=null && Enemy_Unit!=null)
+            if (Player_Unit != null && Enemy_Unit != null)
             {
                 Player_Unit.SetActive(false);
                 Enemy_Unit.SetActive(true);
             }
-          
+
             gameObject.layer = LayerMask.NameToLayer("Enemy");
             targetLayer = playerLayer;
         }
 
 
         //upgrade
-        for (int i=0; i<UnitUpgradeManager.instance.unitDATA.Count; i++)
+        for (int i = 0; i < UnitUpgradeManager.instance.unitDATA.Count; i++)
         {
-           if (UnitUpgradeManager.instance.unitDATA[i].unitName == unitName)
+            if (UnitUpgradeManager.instance.unitDATA[i].unitName == unitName)
             {
-                switch(UnitUpgradeManager.instance.unitDATA[i].curLV)
+                switch (UnitUpgradeManager.instance.unitDATA[i].curLV)
                 {
                     case 2:
                         attackPower *= (1 + 0.1f);
@@ -88,7 +94,7 @@ public class UnitInfo : MonoBehaviour
                 }
             }
         }
-       
+
 
     }
 
@@ -96,10 +102,10 @@ public class UnitInfo : MonoBehaviour
     private void Update()
     {
         FSD();
-        FindTarget();
+        curTartget = FindTarget();
     }
 
-    void FindTarget()
+    UnitInfo FindTarget()
     {
         hits = Physics2D.CircleCastAll(transform.position, attackRange, Vector2.zero, 0f, targetLayer);
 
@@ -108,23 +114,25 @@ public class UnitInfo : MonoBehaviour
         {
             for (int i = 0; i < hits.Length; i++)
             {
-                curTartget = hits[i].transform.GetComponent<UnitInfo>();
-                break;
+                return (hits[i].transform.GetComponent<UnitInfo>());
             }
+            return null;
         }
         else
         {
+            return null;
         }
     }
 
     void FSD()
     {
+        if (ani.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f && currentState == PlayerState.Attack) return;
         if (hp <= 0)
         {
             currentState = PlayerState.Die;
         }
 
-        if (curTartget == null && currentState != PlayerState.Die)
+        if (curTartget == null && currentState != PlayerState.Die && !bForceStop)
         {
             currentState = PlayerState.Walk;
         }
@@ -150,11 +158,16 @@ public class UnitInfo : MonoBehaviour
 
             case PlayerState.Walk:
                 ani.Play("Walk");
-
                 if (isPlayer)
-                    transform.Translate(Vector2.right * speed * Time.deltaTime);
+                {
+                    // transform.Translate(Vector2.right * speed * Time.deltaTime);
+                    rigidBody.linearVelocity = Vector2.right * speed * Time.deltaTime * 100f;
+                }
                 else
-                    transform.Translate(Vector2.left * speed * Time.deltaTime);
+                {
+                    // transform.Translate(Vector2.left * speed * Time.deltaTime);
+                    rigidBody.linearVelocity = Vector2.left * speed * Time.deltaTime * 100f;
+                }
                 break;
 
             case PlayerState.Attack:
@@ -181,7 +194,7 @@ public class UnitInfo : MonoBehaviour
             curTartget.GetDamege(attackPower);
 
         }
-            curAttackSpeed = 0;
+        curAttackSpeed = 0;
     }
 
     public void RageAttack_Event()
@@ -203,6 +216,21 @@ public class UnitInfo : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == this.gameObject.layer)
+        {
+            bForceStop = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == this.gameObject.layer)
+        {
+            bForceStop = false;
+        }
+    }
 
     //Sound
     public void PlaySound_Event(AudioClip clip)

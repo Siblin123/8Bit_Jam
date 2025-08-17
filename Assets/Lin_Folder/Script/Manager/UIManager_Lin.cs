@@ -14,7 +14,7 @@ public class UnitCreation_Img
 public class UIManager_Lin : MonoBehaviour
 {
     [Header("gold")]
-    [SerializeField] Slider goldSlider;
+    [SerializeField] Image goldSlider;
     [SerializeField] TextMeshProUGUI GoldText;
 
     [SerializeField] List<UnitCreation_Img> unitCreation_Image;
@@ -54,8 +54,7 @@ public class UIManager_Lin : MonoBehaviour
     {
         if (goldSlider != null)
         {
-            goldSlider.value = newGoldValue;
-            goldSlider.maxValue = maxValue;
+            goldSlider.fillAmount = newGoldValue / maxValue;
             GoldText.text = ((int)newGoldValue).ToString();
         }
     }
@@ -82,14 +81,19 @@ public class UIManager_Lin : MonoBehaviour
     }
 
 
-    public void UpgradeUnit(string unitName)
+    // public void UpgradeUnit(string unitName)
+    // {
+    //     int [] num= UnitUpgradeManager.instance.UpgradeUnit(unitName);
+    //     if(num[0] != -1)
+    //     {
+    //         //UnitUpgradeManager의 배열값으로 0 <- 텍스트[순서] , 1 <- 다음 코스트 
+    //         UpgradeCost[num[0]].text = num[1].ToString();
+    //     }
+    // }
+
+    public void OnOffUI(GameObject gameObject)
     {
-        int [] num= UnitUpgradeManager.instance.UpgradeUnit(unitName);
-        if(num[0] != -1)
-        {
-            //UnitUpgradeManager의 배열값으로 0 <- 텍스트[순서] , 1 <- 다음 코스트 
-            UpgradeCost[num[0]].text = num[1].ToString();
-        }
+        gameObject.SetActive(! gameObject.activeSelf);
     }
    
 }
