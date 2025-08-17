@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemyCreater_Lin : UnitCreater_Lin
 {
-    
     public override void Start()
     {
         base.Start();
@@ -12,7 +11,8 @@ public class EnemyCreater_Lin : UnitCreater_Lin
     public override void Update()
     {
         goldAcquisition();
-        unitSpawn_BtnEvent(0);
+        unitSpawn_BtnEvent(-1);
+       
     }
 
 }

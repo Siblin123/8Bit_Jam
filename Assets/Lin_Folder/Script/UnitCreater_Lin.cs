@@ -59,18 +59,27 @@ public class UnitCreater_Lin : MonoBehaviour
     {
         //curUnitNumber = 버튼의 순서 = curUnit의 순서
         //curUnitNumber = button order = curUnit order
+        bool isPlayer = true;
+
+        //적군 유닛 소환
+        if (curUnitNumber == -1)
+        {
+            curUnitNumber = 0;
+            isPlayer = false;
+        }
 
         if (curGold >= curUnit[curUnitNumber].price)
         {
             curGold -= curUnit[curUnitNumber].price;
-            Instantiate(curUnit[curUnitNumber].gameObject, unitSpawnLocation.position, Quaternion.identity);
+            GameObject unit = Instantiate(curUnit[curUnitNumber].gameObject, unitSpawnLocation.position, Quaternion.identity);
+            unit.GetComponent<UnitInfo>().isPlayer = isPlayer;
             curUnit[curUnitNumber] = null;
             GetCurUnit();
-           
-            if(isPlayer)
+
+            if (isPlayer)
                 OnGoldChanged?.Invoke(curGold, maxGold);
         }
-
+       
 
     }
 
